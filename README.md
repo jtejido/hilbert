@@ -1,4 +1,7 @@
 # hilbert
+
+<a href="https://travis-ci.org/jtejido/hilbert"><img src="https://img.shields.io/travis/jtejido/hilbert.svg?style=flat-square" alt="Build Status"></a>
+
 Transform N-dimensional points to and from a 1-dimensional Hilbert fractal curve index.
 
 While there has been lots of 2-dimensional implementation present online, it's frustrating to find one that can be used for indexing high-dimensional data (like N-dimensional Hilbert R-Tree for instance).

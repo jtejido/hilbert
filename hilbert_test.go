@@ -16,11 +16,11 @@ limitations under the License.
 package hilbert
 
 import (
-	"math"
-	"testing"
-	"math/bits"
-	"math/big"
 	"github.com/stretchr/testify/assert"
+	"math"
+	"math/big"
+	"math/bits"
+	"testing"
 )
 
 func TestHilbert(t *testing.T) {
@@ -52,7 +52,7 @@ func TestHilbert(t *testing.T) {
 
 func TestHilbertAtMaxRange(t *testing.T) {
 	hilbert, _ := New(uint32(bits.Len64(math.MaxInt64)), 3) // testing at 3 dimensions and 63 (bits.Len64(math.MaxInt64)) bits
-	x, y, z := uint64(math.MaxInt64),uint64(math.MaxInt64), uint64(math.MaxInt64)
+	x, y, z := uint64(math.MaxInt64), uint64(math.MaxInt64), uint64(math.MaxInt64)
 	h := hilbert.Encode(x, y, z)
 	result := hilbert.Decode(h)
 	assert.Equal(t, x, result[0])
