@@ -12,7 +12,8 @@ import (
 )
 
 var (
-	ErrNotPositive = errors.New("N must be greater than zero")
+	ErrNNotPositive = errors.New("Dimension must be greater than zero")
+    ErrBNotPositive = errors.New("Number of bits must be greater than zero")
 )
 
 // This algorithm is derived from work done by John Skilling and published
@@ -24,11 +25,11 @@ type Hilbert struct {
 
 func New(b, n uint32) (*Hilbert, error) {
 	if n <= 0 {
-		return nil, ErrNotPositive
+		return nil, ErrNNotPositive
 	}
 
 	if b <= 0 {
-		return nil, ErrNotPositive
+		return nil, ErrBNotPositive
 	}
 
 	return &Hilbert{
@@ -39,13 +40,18 @@ func New(b, n uint32) (*Hilbert, error) {
 }
 
 // The number of dimensions set
-func (s *Hilbert) Dimensions() uint32 {
+func (s *Hilbert) Dimension() uint32 {
 	return s.dimension
 }
 
 // The number of bits set
-func (s *Hilbert) Len() uint32 {
+func (s *Hilbert) Bit() uint32 {
 	return s.bits
+}
+
+// The number of length set
+func (s *Hilbert) Len() uint32 {
+    return s.length
 }
 
 // Converts points to its Hilbert curve index.
