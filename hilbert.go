@@ -39,17 +39,17 @@ func New(b, n uint32) (*Hilbert, error) {
 	}, nil
 }
 
-// The number of dimensions set
+// The number of dimensions
 func (s *Hilbert) Dimension() uint32 {
 	return s.dimension
 }
 
-// The number of bits set
-func (s *Hilbert) Bit() uint32 {
+// The number of bits
+func (s *Hilbert) Bits() uint32 {
 	return s.bits
 }
 
-// The number of length set
+// The number of length
 func (s *Hilbert) Len() uint32 {
     return s.length
 }
