@@ -8,12 +8,12 @@ import (
 
 	"fmt"
 	. "github.com/jtejido/hilbert"
-	"math/bits"
 	"math/big"
+	"math/bits"
 )
 
 func main() {
-	
+
 	p, err := plot.New()
 	if err != nil {
 		panic(err)
@@ -27,7 +27,7 @@ func main() {
 	sm, _ := New(uint32(bits.Len(1028)), 2)
 
 	fmt.Println("decode 1028")
-	
+
 	pts := make(plotter.XYs, 1028)
 
 	for i := 0; i < 1028; i++ {

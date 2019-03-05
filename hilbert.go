@@ -13,7 +13,7 @@ import (
 
 var (
 	ErrNNotPositive = errors.New("Dimension must be greater than zero")
-    ErrBNotPositive = errors.New("Number of bits must be greater than zero")
+	ErrBNotPositive = errors.New("Number of bits must be greater than zero")
 )
 
 // This algorithm is derived from work done by John Skilling and published
@@ -51,7 +51,7 @@ func (s *Hilbert) Bits() uint32 {
 
 // The number of length
 func (s *Hilbert) Len() uint32 {
-    return s.length
+	return s.length
 }
 
 // Converts points to its Hilbert curve index.
@@ -103,7 +103,7 @@ func (s *Hilbert) transpose(index *big.Int) []uint64 {
 	b := index.Bytes()
 
 	for idx := 0; idx < 8*len(b); idx++ {
-		if (b[len(b)-1-idx/8] & (1 << (uint64(idx) % 8))) != 0 {
+		if (b[len(b)-1-idx/8] & (1 << (uint32(idx) % 8))) != 0 {
 			dim := (s.length - uint32(idx) - 1) % s.dimension
 			shift := (uint32(idx) / s.dimension) % s.bits
 			x[dim] |= 1 << shift
