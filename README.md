@@ -2,7 +2,9 @@
 
 # hilbert
 
-<a href="https://travis-ci.org/jtejido/hilbert"><img src="https://img.shields.io/travis/jtejido/hilbert.svg?style=flat-square" alt="Build Status"></a>
+[![Build Status](https://travis-ci.org/jtejido/hilbert.svg?branch=master)](https://travis-ci.org/jtejido/hilbert) 
+[![codecov](https://codecov.io/gh/jtejido/hilbert/branch/master/graph/badge.svg)](https://codecov.io/gh/jtejido/hilbert)
+
 
 Transform N-dimensional points to and from a 1-dimensional Hilbert fractal curve index.
 
