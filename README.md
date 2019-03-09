@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/jtejido/hilbert.svg?branch=master)](https://travis-ci.org/jtejido/hilbert) 
 [![codecov](https://codecov.io/gh/jtejido/hilbert/branch/master/graph/badge.svg)](https://codecov.io/gh/jtejido/hilbert)
-[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT) 
+[![MIT license](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT) 
 
 
 Transform N-dimensional points to and from a 1-dimensional Hilbert fractal curve index.
