@@ -11,8 +11,7 @@ Transform N-dimensional points to and from a 1-dimensional Hilbert fractal curve
 
 While there has been a number of 2-d & 3-d implementation present online, it's somehow hard to find one that generalizes the notion of Hilbert curves to arbitrary dimensions of hypercube programmatically.
 
-This is helpful (in my personal use-case) for N-dimensional tree variants (B-Tree/R-Tree), voxelization, image compression and dithering, and cache-locality, among others (zeta functions of curves
-and abelian varieties over finite fields, singular homology groups of Peano continua, genomic visualization).
+This is helpful (in my personal use-case) for N-dimensional tree variants (B-Tree/R-Tree).
 
 The core algorithm is a port to Golang from the C code in a paper written by John Skilling published in the journal "Programming the Hilbert curve", (c) 2004 American Institute of Physics.
 
@@ -62,17 +61,3 @@ func main() {
 
  2. Write methods to perform a two-way mapping from your coordinate system to the non-negative integers.
     This transform may require shifting and scaling each dimension a different amount in order to yield a desirable distance metric and origin. 
-
-```
- Example.
-
-    This mapping will have to quantize values. For example, if your numbers range from -10 to +20 
-    and you want to resolve to 0.1 increments, then perform these transformations:
-
-       a. translate by +10 (so all numbers are positive)
-
-       b. scale by x10 (so all numbers are integers)
-
-       c. Since the range is now from zero to 300, the next highest power of two is 512, 
-       so choose nine bits of resolution for the index.
-```
